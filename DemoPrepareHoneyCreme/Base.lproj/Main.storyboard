@@ -1,24 +1,744 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tIS-mV-KLA">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--商品說明-->
+        <scene sceneID="CkF-x2-PL2">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="商品說明" id="BSX-SM-ckx" customClass="InstructionsViewController" customModule="DemoPrepareHoneyCreme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PTI-WL-OCg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fBa-nv-pzH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="78.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fBa-nv-pzH" secondAttribute="height" multiplier="1240:236" id="KMM-Kf-NSf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrr-Wy-j24">
+                                <rect key="frame" x="20" y="98.666666666666657" width="374" height="101.66666666666666"/>
+                                <string key="text">【原味冰淇淋】
+選用台灣的有機通路專賣的鮮奶之外，還加了點鮮奶油增加滑順感，單純乳香的冰淇淋綿密醇厚、濃，奶香略帶點鹹，冰淇淋口感綿細滑順，奶香濃郁。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Original_Cup" translatesAutoresizingMaskIntoConstraints="NO" id="1TV-Ph-RA5">
+                                <rect key="frame" x="85" y="230.33333333333337" width="244" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1TV-Ph-RA5" secondAttribute="height" multiplier="333:500" id="u9n-cv-Abe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DKo-Ga-iB5" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="1TV-Ph-RA5" secondAttribute="bottom" constant="85" id="CHN-dW-15j"/>
+                            <constraint firstItem="DKo-Ga-iB5" firstAttribute="trailing" secondItem="nrr-Wy-j24" secondAttribute="trailing" constant="20" id="aLU-Fo-pHX"/>
+                            <constraint firstItem="1TV-Ph-RA5" firstAttribute="top" secondItem="nrr-Wy-j24" secondAttribute="bottom" constant="30" id="etc-gI-1qS"/>
+                            <constraint firstItem="1TV-Ph-RA5" firstAttribute="leading" secondItem="DKo-Ga-iB5" secondAttribute="leading" constant="85" id="gWA-yf-Jgy"/>
+                            <constraint firstItem="fBa-nv-pzH" firstAttribute="top" secondItem="DKo-Ga-iB5" secondAttribute="top" id="j7T-Jm-Uyg"/>
+                            <constraint firstItem="nrr-Wy-j24" firstAttribute="leading" secondItem="DKo-Ga-iB5" secondAttribute="leading" constant="20" id="lGT-TA-nRx"/>
+                            <constraint firstItem="fBa-nv-pzH" firstAttribute="trailing" secondItem="DKo-Ga-iB5" secondAttribute="trailing" id="ldI-Dl-OYh"/>
+                            <constraint firstItem="DKo-Ga-iB5" firstAttribute="trailing" secondItem="1TV-Ph-RA5" secondAttribute="trailing" constant="85" id="mJz-ud-CtD"/>
+                            <constraint firstItem="fBa-nv-pzH" firstAttribute="leading" secondItem="DKo-Ga-iB5" secondAttribute="leading" id="p19-Eu-MQd"/>
+                            <constraint firstItem="nrr-Wy-j24" firstAttribute="top" secondItem="fBa-nv-pzH" secondAttribute="bottom" constant="20" id="uEc-vN-rfn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DKo-Ga-iB5"/>
                     </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="nrr-Wy-j24" id="Pxa-eI-ChZ"/>
+                        <outlet property="icecreamImageView" destination="1TV-Ph-RA5" id="Utx-eH-22w"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSC-6d-jkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3192.753623188406" y="-660.32608695652175"/>
+        </scene>
+        <!--主要顯示-->
+        <scene sceneID="ARG-Xf-kOn">
+            <objects>
+                <viewController title="主要顯示" id="IGf-go-aPc" customClass="MainListViewController" customModule="DemoPrepareHoneyCreme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B59-gs-2OL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-Ks-YmN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="78.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xZi-Ks-YmN" secondAttribute="height" multiplier="1240:236" id="pqD-f8-I5L"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="News" translatesAutoresizingMaskIntoConstraints="NO" id="Rpg-Yg-AMt">
+                                <rect key="frame" x="0.0" y="78.666666666666643" width="414" height="153.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rpg-Yg-AMt" secondAttribute="height" multiplier="1140:422" id="VmI-7k-tgq"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4c-Md-YfJ">
+                                <rect key="frame" x="0.0" y="232" width="414" height="388"/>
+                                <connections>
+                                    <segue destination="4KX-Q6-Kns" kind="embed" id="Sxt-v9-KaS"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rpg-Yg-AMt" firstAttribute="width" secondItem="Rpg-Yg-AMt" secondAttribute="height" multiplier="1140:422" id="30P-rN-mda"/>
+                            <constraint firstItem="Rpg-Yg-AMt" firstAttribute="leading" secondItem="PUH-iR-ibv" secondAttribute="leading" id="7B9-Va-GT4"/>
+                            <constraint firstItem="PUH-iR-ibv" firstAttribute="trailing" secondItem="X4c-Md-YfJ" secondAttribute="trailing" id="8Ff-Ty-nZe"/>
+                            <constraint firstAttribute="trailing" secondItem="xZi-Ks-YmN" secondAttribute="trailing" id="Mgl-iI-pkk"/>
+                            <constraint firstItem="X4c-Md-YfJ" firstAttribute="top" secondItem="Rpg-Yg-AMt" secondAttribute="bottom" id="Te4-m5-BdC"/>
+                            <constraint firstItem="PUH-iR-ibv" firstAttribute="bottom" secondItem="X4c-Md-YfJ" secondAttribute="bottom" id="Yil-f6-Igc"/>
+                            <constraint firstItem="X4c-Md-YfJ" firstAttribute="leading" secondItem="PUH-iR-ibv" secondAttribute="leading" id="Ymp-1S-p4B"/>
+                            <constraint firstItem="Rpg-Yg-AMt" firstAttribute="trailing" secondItem="PUH-iR-ibv" secondAttribute="trailing" id="cdO-7y-gaw"/>
+                            <constraint firstItem="xZi-Ks-YmN" firstAttribute="leading" secondItem="PUH-iR-ibv" secondAttribute="leading" id="mRp-mN-jZd"/>
+                            <constraint firstItem="xZi-Ks-YmN" firstAttribute="top" secondItem="PUH-iR-ibv" secondAttribute="top" id="t2W-zQ-Syn"/>
+                            <constraint firstItem="Rpg-Yg-AMt" firstAttribute="top" secondItem="xZi-Ks-YmN" secondAttribute="bottom" id="y3s-fK-1h4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PUH-iR-ibv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="商品選單" id="kGP-Xl-rKu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kL-qm-j3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647.826086956522" y="-660.32608695652175"/>
+        </scene>
+        <!--商品選單-->
+        <scene sceneID="3EB-lT-o5c">
+            <objects>
+                <tableViewController title="商品選單" id="4KX-Q6-Kns" customClass="ListTableViewController" customModule="DemoPrepareHoneyCreme" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rfk-OH-8RH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="LDb-yr-8c5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="MkY-xZ-MYy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MkY-xZ-MYy" id="XQI-hv-Eeh">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Original_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="lpd-To-CQf">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【原味冰淇淋】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXn-NT-O9Y">
+                                                    <rect key="frame" x="170" y="18" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="original" id="L5p-5b-XiE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="jiF-lK-7P5">
+                                        <rect key="frame" x="0.0" y="59" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jiF-lK-7P5" id="vHT-vs-0zV">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honey_Comb_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="OPs-Eb-K2C">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【蜂巢冰淇淋】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-yp-bNa">
+                                                    <rect key="frame" x="170" y="19" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="combHoney" id="pRk-9n-naP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="9Ft-7t-om0">
+                                        <rect key="frame" x="0.0" y="118" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ft-7t-om0" id="kEo-SC-x5y">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Comb_Honey_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-Mm-OJ2">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【巢蜜冰淇淋】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZx-Ox-Qtp">
+                                                    <rect key="frame" x="170" y="18" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="combHoney" id="7CO-dy-PMD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="zgD-ec-HdD">
+                                        <rect key="frame" x="0.0" y="177" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zgD-ec-HdD" id="P8B-gK-Ktu">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbnal_04_Affogato" translatesAutoresizingMaskIntoConstraints="NO" id="Q9N-Jx-NJQ">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【濃縮咖啡】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-An-tPq">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="affogato" id="0uK-KW-qqV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="VSs-aX-LgI">
+                                        <rect key="frame" x="0.0" y="236" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VSs-aX-LgI" id="v9p-XI-hAx">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OrganicCotton_Candy_Affogato_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="7yU-q0-Crl">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【有機棉花糖咖啡】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw7-nV-Ba4">
+                                                    <rect key="frame" x="150" y="18" width="156" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="organicCottonCandyAffogato" id="iEf-oN-PU7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="G3L-XQ-oQl">
+                                        <rect key="frame" x="0.0" y="295" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G3L-XQ-oQl" id="gUX-yB-1gf">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Organic_Cotton_Candy_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="xV5-hE-gaX">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【有機棉花糖】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-9y-9uQ">
+                                                    <rect key="frame" x="170" y="19" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="organicCottonCandy" id="QMA-PD-ANY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="bnQ-lJ-ZMm">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bnQ-lJ-ZMm" id="hho-1U-GhV">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Organic_Mix_Greins_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-4J-PDd">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【有機混合穀粉】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-lw-lar">
+                                                    <rect key="frame" x="160" y="18" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="organicMixedGrains" id="uuX-Hx-lgD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Vh8-7o-bIn">
+                                        <rect key="frame" x="0.0" y="413" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vh8-7o-bIn" id="Jb6-P9-wAB">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dark_Chocolate_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-3t-QNU">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【黑巧克力淋醬】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99E-LJ-dX4">
+                                                    <rect key="frame" x="160" y="18" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="darkChocolate" id="sr4-lB-0rY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="pEr-oO-18Z">
+                                        <rect key="frame" x="0.0" y="472" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEr-oO-18Z" id="hKY-hh-RtA">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chocolate_Beans_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="LLU-tG-U63">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【巧克力球】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa5-8o-jvd">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="chocolateBeans" id="HP3-iD-aQo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="TyI-1R-ki9">
+                                        <rect key="frame" x="0.0" y="531" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TyI-1R-ki9" id="36e-4i-lnK">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Castella_Cake_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="tPB-Un-c8B">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【長崎蛋糕】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDm-Wg-b0Y">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="castellaCake" id="FPL-cQ-xbt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="IGV-5Z-1C3">
+                                        <rect key="frame" x="0.0" y="590" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IGV-5Z-1C3" id="xix-wp-LPW">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【爆米花】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwS-mh-cSH">
+                                                    <rect key="frame" x="190" y="18" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pop_Corn_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="qLh-C8-S5s">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="popCorn" id="u2B-6o-lnJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="yeZ-zR-4gA">
+                                        <rect key="frame" x="0.0" y="649" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yeZ-zR-4gA" id="YUW-Sn-Tar">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yuanyang_Milk_Tea_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="cfE-6B-cmb">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【鴛鴦奶茶】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGl-6G-IvG">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="yuanyangMilkTea" id="JBx-U1-ZtD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Zyd-Qb-FFL">
+                                        <rect key="frame" x="0.0" y="708" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zyd-Qb-FFL" id="MEW-16-LgG">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yuanyang_Milk_Tea_With_Boba_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="PWj-sc-sCW">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【珍珠鴛鴦奶茶】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLV-EQ-Utt">
+                                                    <rect key="frame" x="160" y="18" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="yuanyangMilkTeaWithBoba" id="wNc-eg-ppQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="1jb-ds-HUY">
+                                        <rect key="frame" x="0.0" y="767" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jb-ds-HUY" id="xk1-mX-SlY">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bacon_With_Chocolate_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="ugC-AG-4ss">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【培根巧克力】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCn-OB-fI3">
+                                                    <rect key="frame" x="170" y="18" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="baconWithChocolate" id="vjy-c2-lIO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Si3-f5-6cG">
+                                        <rect key="frame" x="0.0" y="826" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Si3-f5-6cG" id="Hec-qf-AIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【啾拿棒】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1u-eX-ij5">
+                                                    <rect key="frame" x="190" y="18" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Churros_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-cr-kOY">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="churros" id="V3T-9B-ci1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Z9O-aR-zrl">
+                                        <rect key="frame" x="0.0" y="885" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z9O-aR-zrl" id="EK0-mJ-ZZD">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Baileys_Original_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-FP-sxB">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【杏片奶酒】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8US-nq-L0N">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="baileysOriginal" id="agH-Vo-8F4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="AtD-8p-l79">
+                                        <rect key="frame" x="0.0" y="944" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AtD-8p-l79" id="B4P-Mh-vzX">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tiramisa_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="RFG-7U-wbS">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【提拉米蘇】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzP-Oi-LNy">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="tiramisa" id="TU4-wD-TcP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="MW7-Z0-cEC">
+                                        <rect key="frame" x="0.0" y="1003" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MW7-Z0-cEC" id="Wlc-Pr-U8f">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【玫瑰跳跳糖】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5O-kN-eGZ">
+                                                    <rect key="frame" x="170" y="18" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rose_Jam_With_Popping_Cotton_Candy_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="WyM-q9-wA8">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="roseJamWithPoppingCottonCandy" id="TYo-9S-K8A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="xd7-1I-MM8">
+                                        <rect key="frame" x="0.0" y="1062" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xd7-1I-MM8" id="V4E-Iy-Bwe">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【百香果】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhX-nO-pOX">
+                                                    <rect key="frame" x="190" y="18" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passion_Fruit_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-Jg-keE">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="passionFruit" id="H7u-L3-vEL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="qrt-N6-VdV">
+                                        <rect key="frame" x="0.0" y="1121" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qrt-N6-VdV" id="ntv-RP-bVZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【榴槤脆果】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyQ-Ly-5YT">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Durian_Apple_Mixed_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="9VG-Nv-HYi">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="durianAppleMixed" id="KdO-g8-tZU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="MLI-NX-fBx">
+                                        <rect key="frame" x="0.0" y="1180" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MLI-NX-fBx" id="VN3-y2-Z7X">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【蜜糖脆片】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPx-yO-boN">
+                                                    <rect key="frame" x="180" y="18" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cereal_Milk_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-Qc-2om">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="cerealMilk" id="wuJ-f7-d7b"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="4UC-yS-1vp">
+                                        <rect key="frame" x="0.0" y="1239" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4UC-yS-1vp" id="9rR-7S-XvW">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="【馬卡龍】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwu-vu-wfY">
+                                                    <rect key="frame" x="190" y="18" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macaroon_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="si5-QF-Gfc">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="macaroon" id="xU2-bm-gRK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="5vf-m8-Xnr">
+                                        <rect key="frame" x="0.0" y="1298" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5vf-m8-Xnr" id="F4o-ib-caA">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="58.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-oR-BRF">
+                                                    <rect key="frame" x="190" y="18" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">【香蘭葉】
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pandan_Thumbnal" translatesAutoresizingMaskIntoConstraints="NO" id="coN-vi-9Vh">
+                                                    <rect key="frame" x="15" y="3" width="101" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BSX-SM-ckx" kind="show" identifier="pandan" id="3To-in-A5a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="4KX-Q6-Kns" id="Jw6-FN-pzH"/>
+                            <outlet property="delegate" destination="4KX-Q6-Kns" id="s8m-d1-Qzw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xc-Ir-Dz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478.2608695652175" y="-660.32608695652175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Jq-Lc-oee">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tIS-mV-KLA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Lhk-n0-6LO">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IGf-go-aPc" kind="relationship" relationship="rootViewController" id="H4C-Vn-tzn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKQ-Ba-sMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740.57971014492762" y="-660.32608695652175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bacon_With_Chocolate_Thumbnal" width="300" height="200"/>
+        <image name="Baileys_Original_Thumbnal" width="300" height="200"/>
+        <image name="Castella_Cake_Thumbnal" width="300" height="200"/>
+        <image name="Cereal_Milk_Thumbnal" width="300" height="200"/>
+        <image name="Chocolate_Beans_Thumbnal" width="300" height="200"/>
+        <image name="Churros_Thumbnal" width="300" height="200"/>
+        <image name="Comb_Honey_Thumbnal" width="300" height="200"/>
+        <image name="Dark_Chocolate_Thumbnal" width="300" height="200"/>
+        <image name="Durian_Apple_Mixed_Thumbnal" width="300" height="200"/>
+        <image name="Honey_Comb_Thumbnal" width="300" height="200"/>
+        <image name="Logo" width="1240" height="236"/>
+        <image name="Macaroon_Thumbnal" width="300" height="200"/>
+        <image name="News" width="1140" height="422"/>
+        <image name="OrganicCotton_Candy_Affogato_Thumbnal" width="300" height="200"/>
+        <image name="Organic_Cotton_Candy_Thumbnal" width="300" height="200"/>
+        <image name="Organic_Mix_Greins_Thumbnal" width="300" height="200"/>
+        <image name="Original_Cup" width="333" height="500"/>
+        <image name="Original_Thumbnal" width="300" height="200"/>
+        <image name="Pandan_Thumbnal" width="300" height="200"/>
+        <image name="Passion_Fruit_Thumbnal" width="300" height="200"/>
+        <image name="Pop_Corn_Thumbnal" width="300" height="200"/>
+        <image name="Rose_Jam_With_Popping_Cotton_Candy_Thumbnal" width="300" height="200"/>
+        <image name="Tiramisa_Thumbnal" width="300" height="200"/>
+        <image name="Yuanyang_Milk_Tea_Thumbnal" width="300" height="200"/>
+        <image name="Yuanyang_Milk_Tea_With_Boba_Thumbnal" width="300" height="200"/>
+        <image name="thumbnal_04_Affogato" width="300" height="200"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="L5p-5b-XiE"/>
+    </inferredMetricsTieBreakers>
 </document>
